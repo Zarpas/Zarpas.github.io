@@ -55,7 +55,7 @@
 				<section id="fragments" data-auto-animate>
 					<h6>Lenguaje de marcas</h6>
 					<p>Lenguaje de marcas o HTML</p>
-					<img class="fragment" src="Imagenes/Reto_4/Tim_Berners-Lee.jpg">
+					<img data-id="tim" class="fragment" src="Imagenes/Reto_4/Tim_Berners-Lee.jpg">
 					<aside class="notes">
 					    Alguien sabe decirme quien este caballero?
 				    </aside>
@@ -66,7 +66,7 @@
 					<table style="width: 100%">
 					    <tr>
 						    <td>
-							    <img src="Imagenes/Reto_4/Tim_Berners-Lee.jpg">
+							    <img data-id="tim" src="Imagenes/Reto_4/Tim_Berners-Lee.jpg">
 						    </td>
 						    <td style="vertical-align: top">
 							    <p>Tim Berners-Lee</p>
@@ -106,26 +106,43 @@
 				        <img class="fragment" src="Imagenes/Reto_4/First_Web_Server_Detail2.jpg">
 				    </div>
 				    <aside class="notes">
-					    <p>Si nos fijamos en el documento que hay sobre el teclado</p>
-					    <p>vemos el documento embrion de la web</p>
+					    <p>Si nos fijamos en el documento que hay sobre el teclado vemos el documento embrion de la web</p>
+					    <p>Y la pegatina de servidor, no apagar</p>
 				    </aside>
 				</section>
 				<section data-auto-animate>
 					<h6 data-id="code-title">Lenguaje de marcas</h6>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-noescape data-line-numbers><script type="text/template">
+					<pre data-id="code-animation"><code data-trim data-noescape data-line-numbers><script type="text/template">
 						<html>
+						...
 						</html>
 					</script></code></pre>
 				    <aside class="notes">
-					    <p>Si nos fijamos en el documento que hay sobre el teclado</p>
-					    <p>vemos el documento embrion de la web</p>
+					    <p>Etiqueta HTML</p>
+					    <p>todo archivo html, empieza ya acaba con esta etiqueta</p>
 				    </aside>
 				</section>
 				<section data-auto-animate>
 					<h6 data-id="code-title">Lenguaje de marcas</h6>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-noescape data-line-numbers="2-5"><script type="text/template">
+					<pre data-id="code-animation"><code data-trim data-noescape data-line-numbers="2-5"><script type="text/template">
 						<html>
 						    <head>
+						    </head>
+						    <body>
+						    </body>
+						</html>
+					</script></code></pre>
+				    <aside class="notes">
+					    <p>Dentro encontramos otras dos, head y body</p>
+					    <p>La primera para los elementos invisibles y de configuración, la segunda para la organización y contenidos</p>
+				    </aside>
+				</section>
+				<section data-auto-animate>
+					<h6 data-id="code-title">Lenguaje de marcas</h6>
+					<pre data-id="code-animation"><code data-trim data-noescape data-line-numbers="3"><script type="text/template">
+						<html>
+						    <head>
+						    	<title>Primera pagina</title>
 						    </head>
 						    <body>
 						    </body>
