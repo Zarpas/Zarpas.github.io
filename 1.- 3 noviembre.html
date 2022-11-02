@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="Introduccion a programación de Arduino">
+		<meta name="author" content="Igor Martín">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-transition="fade">
+					<h3>Presentación curso de Arduino</h3>
+					<p>
+						<small>Created by <a href="https://github.com/Zarpas">Igor Martín</a></small>
+					</p>
+
+					<aside class="notes">
+						Pulsa S para ver las notas.<br>Habla claro, tranquilo y alto, para que te escuchen bien.
+					</aside>
+				</section>
+
+				<section data-transition="fade">
+					<h2>Bienvenidos</h2>
+					<p>
+						¿Que vamos a ver en este curso?
+					</p>
+
+					<aside class="notes">
+						Preguntar si han hablado que es lo que vamos a impartir.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Temas que veremos:</h3>
+					<ul>
+						<li style="display: inline-block;" class="fragment fade-up">Regulación en bucle abierto y cerrado</li>
+						<li style="display: inline-block;" class="fragment fade-up">Motores, tipos y regulación de velocidad</li>
+						<li style="display: inline-block;" class="fragment fade-up">Conexionado de regulador a Arduino</li>
+						<li style="display: inline-block;" class="fragment fade-up">Puesta en marcha de motores</li>
+						<li style="display: inline-block;" class="fragment fade-up">Sensores adecuados para medida de motores</li>
+						<li style="display: inline-block;" class="fragment fade-up">Programación de Arduino para leer sensores</li>
+						<li style="display: inline-block;" class="fragment fade-up">Integración de sensor y motor en Arduino</li>
+						<li style="display: inline-block;" class="fragment fade-up">Metodos de regulación</li>
+						<li style="display: inline-block;" class="fragment fade-up">Otros posibles usos de lo presentado</li>
+					</ul>
+
+					<aside class="notes">
+						Presentación por encima, veremos algo más en las siguientes diapos.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Regulación en bucle abierto y cerrado.</h3>
+
+					<ul>
+						<li>Bucle abierto</li>
+						<li>Bucle cerrado</li>
+					</ul>
+
+					<aside class="notes">
+						Tipos de regulación y casos de uso.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Motores, tipos y regulación de velocidad.</h3>
+
+					<ul>
+						<li>Motores de CC (Corriente Continua)</li>
+						<li>Motores de AC monofasico y trifasico(Corriente Alterna)</li>
+						<li>Motores BLDC (BrushLess Direct Current)</li>
+					</ul>
+
+					<aside class="notes">
+						Tipos de motores CC, AC, BLDC.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Conexionado de regulador a Arduino.</h3>
+
+					<p>Como conectar el regulador al Arduino, diferentes protocolos y opciones.</p>
+
+					<aside class="notes">
+						PWM, RS485, CAN, otros.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Puesta en marcha de motores.</h3>
+
+					<p>Como programar en C para mover el motor y controlarlo.</p>
+
+					<aside class="notes">
+						Escribir un programa que de vida al motor, variación de velocidad.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Sensores adecuados para medida de motores.</h3>
+
+					<p>Como conectar diferentes tipos de sensores.</p>
+
+					<aside class="notes">
+						Tipos de sensores y conexiones.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Programación de Arduino para leer sensores.</h3>
+
+					<p>Como programar en C para leer sensores de diferentes tipos.</p>
+
+					<aside class="notes">
+						Introducción a las interrupciones, y como utilizarlas.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Integración de sensor y motor en Arduino.</h3>
+
+					<p>Como integrar la lectura de los sensores y usar esa información para los motores.</p>
+
+					<aside class="notes">
+						Entrada -> Salida.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Metodos de regulación.</h3>
+
+					<p>Tipos de regulación, casos de uso, pros y contras, de cada uno.</p>
+
+					<aside class="notes">
+						Proporcional, Integral, Diferencial.
+					</aside>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Otros posibles usos de lo presentado.</h3>
+
+					<p>Otras aplicaciones de lo que hemos visto. Combinaciones con otros tipos de sensores.</p>
+
+					<aside class="notes">
+						Potenciometro, ultrasonidos, sensor inductivo, ..
+					</aside>
+				</section>
+
+				<section data-markdown data-visibility="hidden">
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+
+						```html []
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section data-visibility="hidden">
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section data-visibility="hidden">
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p style="display: inline-block;" class="fragment fade-up">De momento...</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
