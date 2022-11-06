@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Escuela del Papel - Curso de Arduino 2022</title>
+
+		<meta name="description" content="Introduccion a programación de Arduino">
+		<meta name="author" content="Igor Martín">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-transition="fade">
+					<h3>Regulación en lazo abierto y cerrado.</h3>
+					<p>
+						<small>Created by <a href="https://github.com/Zarpas">Igor Martín</a></small>
+					</p>
+				</section>
+
+				<section data-transition="fade">
+					<h2>Lazo abierto</h2>
+					<img src="imagenes/2/open-loop-system.jpg" alt="lazo abierto">
+				</section>
+
+				<section data-transition="convex">
+					<h2>Lazo abierto</h2>
+					<p>Ventajas</p>
+					<ul>
+						<li style="display: inline-block;" class="fragment fade-up">Son de diseño simple y fáciles de implementar.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Son más economicos que otro sistema de control.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Son convenientes para cumplir tareas por ciclos o tiempos.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Requieren poco mantenimiento.</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h2>Lazo abierto</h2>
+					<p>Inconvenientes</p>
+					<ul>
+						<li style="display: inline-block;" class="fragment fade-up">El sistema de no tiene retroalimentación por lo que no facilita la automatización del proceso.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Son sistemas inexactos y poco precisos.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Es afectado por las perturbaciones externas del proceso.</li>
+						<li style="display: inline-block;" class="fragment fade-up">No es capaz de corregir las desviaciones de la salida de forma automática.</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h2>Lazo cerrado</h2>
+					<img src="imagenes/2/closed-loop-control-system.jpg" alt="lazo cerrado">
+				</section>
+
+				<section data-transition="convex">
+					<h2>Lazo cerrado</h2>
+					<p>Ventajas</p>
+					<ul>
+						<li style="display: inline-block;" class="fragment fade-up">Tienen una señal de retroalimentación para controlar la salida por lo tanto precisos y menos propensos a errores.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Corrigen errores mediante la señal de realimentación.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Son menos afectados por el ruido del proceso.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Soportan automatización del proceso.</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h2>Lazo cerrado</h2>
+					<p>Inconvenientes</p>
+					<ul>
+						<li style="display: inline-block;" class="fragment fade-up">Son más complejos para ser diseñados y ajustados.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Son sistemas caros.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Provocan oscilaciones dentro del proceso si no estan bien ajustados.</li>
+						<li style="display: inline-block;" class="fragment fade-up">Requieren alto mantenimiento.</li>
+					</ul>
+				</section>
+
+
+				
+
+				<section data-markdown data-visibility="hidden">
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+
+						```html []
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section data-visibility="hidden">
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section data-visibility="hidden">
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p style="display: inline-block;" class="fragment fade-up">De momento...</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
