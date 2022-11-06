@@ -3,4 +3,4 @@ Curso de Arduino para Escuela del Papel de Tolosa basado en [reveal.js](https://
 
 ## Licencia
 
-MIT licensed
+CC0
