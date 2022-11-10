@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Escuela del Papel - Curso de Arduino 2022</title>
+
+		<meta name="description" content="Introduccion a programación de Arduino">
+		<meta name="author" content="Igor Martín">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3 style="text-transform:capitalize">Lenguaje C para Arduino.</h3>
+					<p>
+						<small>Created by <a href="https://github.com/Zarpas">Igor Martín</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h4>Archivo básico de Arduino</h4>
+					<p style="text-align:justify">Un archivo básico de Arduino tiene el siguiente aspecto:</p>
+
+					<pre><code data-trim data-noescape>
+						void setup() {
+						}
+						
+						void loop() {
+						}
+					</code></pre>
+					
+					
+				</section>
+
+				<section>
+					<h4 style="text-transform:lowercase">void setup()</h4>
+					<p style="text-align:justify">Esta función se ejecuta una vez cuando el Arduino se enciende o se pulsa el botón de reset.</p>
+					<p style="text-align:justify">Se utiliza para configurar las partes necesarias del Arduino y que quede listo para ejecutar lo necesario en la siguiente función.</p>
+					
+				</section>
+
+				<section>
+					<h4 style="text-transform:lowercase">void loop()</h4>
+					<p style="text-align:justify">Esta función contiene el grueso del programa a ejecutar. Se repetira de manera constante mientras el Arduino este alimentado.</p>
+					<p style="text-align:justify">Esta función es llamada automaticamente en cuanto termina la función <span style="color:aqua">loop()</span>.</p>
+					
+				</section>
+
+				<section>
+					<h3>Variables</h3>
+
+					<p style="text-align:justify">Las variables son una parte muy importante de la programación, nos permite almacenar información de forma temporal para utilizarla en el programa.</p>
+					<!-- <p style="text-align:justify">.</p> -->
+
+				</section>
+
+				<section>
+					<h3>Variables</h3>
+
+					<p style="text-align:justify">Arduino dispone de varios tipos de variables, veremos cada uno con detenimiento.</p>
+
+					<table>
+						<tr>
+							<th><a href="#/23">array</a></th>
+							<th><a href="#/6">bool</a></th>
+							<th><a href="#/7">boolean</a></th>
+							
+						</tr>
+						<tr>
+							<th><a href="#/8">byte</a></th>
+							<th><a href="#/9">char</a></th>
+							<th><a href="#/10">double</a></th>
+							
+						</tr>
+						<tr>
+							<th><a href="#/11">float</a></th>
+							<th><a href="#/12">int</a></th>
+							<th><a href="#/13">long</a></th>
+							
+						</tr>
+						<tr>
+							<th><a href="#/14">short</a></th>
+							<th><a href="#/15">size_t</a></th>
+							<th><a href="#/16">string</a></th>
+							
+						</tr>
+						<tr>
+							<th><a href="#/17">String()</a></th>
+							<th><a href="#/18">unsigned char</a></th>
+							<th><a href="#/19">unsigned int</a></th>
+							
+
+						</tr>
+						<tr>
+							<th><a href="#/20">unsigned long</a></th>
+							<th><a href="#/21">void</a></th>
+							<th><a href="#/22">word</a></th>
+						
+						</tr>
+					</table>
+
+
+					
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">bool</span></h4>
+
+					<p style="text-align:justify">Una variable bool mantiene uno de dos valores, true o false (Cada variable bool ocupa un byte en memoria).</p>
+
+					<pre><code data-trim data-noescape>
+						bool ejecutando = false;
+						bool visto = true;
+					</code></pre>
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">boolean</span></h4>
+					
+					<p style="text-align:justify"><span style="color:aqua">boolean</span> es un alias no estándar de <a href="#/6">bool</a> definido por Arduino. Se recomienda utilizar el tipo estandar <a href="#/6">bool</a>, que es idéntico.</p>
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">byte</span></h4>
+
+					<p style="text-align:justify">Una variable byte almacena un número de 8 bit sin signo, desde 0 hasta 255.</p>
+
+					<pre><code data-trim data-noescape>
+						byte nombre = val;
+					</code></pre>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">char</span></h4>
+
+					<p style="text-align:justify">Un tipo de variable utilizado para almacenar el valor de un caracter. Los caracteres literales se escriben con comillas simples, 'A' (para varios caracteres, string, se usan comillas dobles: "ABC").</p>
+
+					<pre><code data-trim data-noescape>
+						char nombre = val;
+					</code></pre>
+
+					<p style="text-align:justify">De todos modos, los caracteres son almacenados como números. Puedes consultar la <a href="https://www.asciitable.com/" target="_blank">tabla ASCII.</a> Esto significa que puedes realizar operaciones matematicas con los caracteres.</p>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">double</span></h4>
+
+					<p style="text-align:justify">Número de coma flotante de doble precisión. En el Arduino Uno, y otras placas basadas en ATMEGA, este ocupa 4 bytes. Esto es, double es exactamente igual que float, sin ganancia de precisión.</p>
+					
+					<pre><code data-trim data-noescape>
+						double nombre = val;
+					</code></pre>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">float</span></h4>
+
+					<p style="text-align:justify">Tipo para número de coma flotante, un número que tiene una coma decimal. Los números de coma flotante se usan con frecuencia para aproximarse a valores analogicos y de valores continuos por tener mayor resolución que los enteres. Los números de coma flotante puede ser tan grandes como 3.4028235E+38 y tan bajos como -3.4028235E+38. Se almacenan como 32 bits (4 bytes) de información.</p>
+					
+					<pre><code data-trim data-noescape>
+						float nombre = val;
+					</code></pre>
+
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">int</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">long</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">short</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">size_t</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">string</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">String()</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">unsigned char</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">unsigned int</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">unsigned long</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">void</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variables <span style="text-transform:lowercase">word</span></h4>
+				
+				</section>
+
+				<section>
+					<h4 style="text-transform:capitalize">Variable <span style="text-transform:lowercase">array</span></h4>
+				
+				</section>
+
+
+
+
+				
+
+				<section data-markdown data-visibility="hidden">
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+
+						```html []
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section data-visibility="hidden">
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section data-visibility="hidden">
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p style="display: inline-block;" class="fragment fade-up">De momento...</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
